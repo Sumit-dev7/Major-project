@@ -1,0 +1,221 @@
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      body {
+        background-color: #f8f9fa;
+        color: #333;
+        scroll-behavior: smooth;
+      }
+
+      
+      header {
+        background: linear-gradient(90deg, #1b62cd, #4facfe);
+        padding: 15px 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        transition: background 0.3s;
+      }
+
+      header.scrolled {
+        background: linear-gradient(90deg, #0052cc, #2fa3f2);
+      }
+
+      .logo p {
+        font-size: 26px;
+        font-weight: bold;
+        color: white;
+        letter-spacing: 1px;
+      }
+
+      nav {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        font-size: 16px;
+        color: white;
+        transition: 0.3s;
+      }
+
+      .nav-links a:hover {
+        color: #ffc107;
+      }
+
+      .sign-but button {
+        border: none;
+        background: #d5d8d5;
+        padding: 8px 16px;
+        border-radius: 7px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .sign-but button:hover {
+        background: #ffc107;
+      }
+
+      
+      .search {
+        background: url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c")
+          no-repeat center/cover;
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0 20px;
+        color: white;
+        position: relative;
+      }
+
+      .search::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.2);
+        z-index: 0; 
+        pointer-events: none; 
+      }
+
+      .search h1,
+      .search p,
+      .search .hero-search {
+        position: relative;
+        z-index: 1; 
+      }
+
+      .search h1 {
+        font-size: 48px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+      }
+
+      .search p {
+        font-size: 20px;
+        margin-bottom: 25px;
+        max-width: 700px;
+      }
+
+      
+      .hero-search {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        margin-top: 15px;
+      }
+
+      .hero-search select,
+      .hero-search input {
+        padding: 12px 15px;
+        border-radius: 6px;
+        border: none;
+        outline: none;
+        font-size: 16px;
+      }
+
+      .hero-search button {
+        padding: 12px 25px;
+        border-radius: 6px;
+        border: none;
+        background: #ffc107;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .hero-search button:hover {
+        background: #ffb300;
+      }
+
+     
+      .services {
+        padding: 60px 50px;
+        text-align: center;
+      }
+
+      .services h3 {
+        font-size: 30px;
+        margin-bottom: 40px;
+        color: #0050cc;
+      }
+
+      .service-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+      }
+
+      .service-card {
+        background: white;
+        border-radius: 12px;
+        padding: 30px 20px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .service-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
+      }
+
+      .service-card h4 {
+        margin-bottom: 10px;
+        font-size: 20px;
+        color: #333;
+      }
+
+      .service-card p {
+        font-size: 14px;
+        color: #666;
+      }
+
+      
+      footer {
+        background: #333;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        margin-top: 50px;
+      }
+
+      footer p {
+        font-size: 14px;
+      }
+
+      @media (max-width: 768px) {
+        header {
+          flex-direction: column;
+          gap: 15px;
+        }
+        nav {
+          flex-direction: column;
+          gap: 10px;
+        }
+        .search h1 {
+          font-size: 36px;
+        }
+        .search p {
+          font-size: 16px;
+        }
+        .hero-search {
+          flex-direction: column;
+        }
+      }

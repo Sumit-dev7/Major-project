@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  background-color: rgb(204, 240, 240);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+header {
+  color: rgb(36, 32, 32);
+  background: rgba(255, 255, 255, 0.2);
+  margin-top: 10px;
+  padding: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  background-color: #fff;
+  padding: 35px 30px;
+  border-radius: 15px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  width: 480px;
+  text-align: center;
+  animation: fadeIn 1s ease;
+}
+.container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #6a11cb;
+}
+.input-grp {
+  margin-bottom: 18px;
+  position: relative;
+}
+.input-grp input {
+  width: 100%;
+  padding: 12px 40px 12px 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  position: relative;
+  transition: 0.3s;
+}
+.input-grp input:focus {
+  border-color: #2575fc;
+  box-shadow: 0 0 8px rgba(37, 117, 252, 0.3);
+}
+input:focus {
+  border-color: #4facfe;
+  box-shadow: 0px 0px 6px #4facfe;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #4facfe;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 1s;
+}
+button:hover {
+  opacity: 0.9;
+  background: #008cff;
+  transform: scale(1.02);
+}
+.outer-links {
+  margin-top: 15px;
+  font-size: 15px;
+}
+.outer-links a {
+  text-decoration: none;
+  margin: 0 5px;
+  color: #4facfe;
+}
+.outer-links a:hover {
+  text-decoration: underline;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+footer {
+  text-align: center;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-weight: bold;
+  margin-top: auto;
+}

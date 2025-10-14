@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BuildEasy - Home Services Marketplace</title>
+  <link rel="stylesheet" href="css/dash.css">
+  </head>
+  <body>
+    <header id="navbar">
+      <div class="logo">
+        <p>BuildEasy</p>
+      </div>
+      <nav>
+        <div class="nav-links">
+          <a href="#">Categories</a>
+          <a href="#">Top Professionals</a>
+          <a href="#">Contacts</a>
+        </div>
+        <div class="sign-but">
+          <a href="sign.html"><button id="signInBtn">Sign in</button></a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <div class="search">
+          <h1>Your Trusted Home Services, Anytime</h1>
+          <p>
+            Find verified professionals for plumbing, cleaning, electrical,
+            construction, and more. Book services in just a few clicks.
+          </p>
+          <div class="hero-search">
+            <select id="service">
+              <option value="">Select Service</option>
+              <option value="plumbing">Plumbing</option>
+              <option value="electrician">Electrician</option>
+              <option value="cleaning">Cleaning</option>
+              <option value="carpentry">Carpentry</option>
+              <option value="painting">Painting</option>
+              <option value="ac">AC & Appliances</option>
+            </select>
+            <input type="text" id="city" placeholder="Enter City" />
+            <button id="searchBtn">Search</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="services" id="categories">
+        <h3>Popular Services</h3>
+        <div class="service-grid">
+          <div class="service-card">
+            <h4>Plumbing</h4>
+            <p>Leak repair, installations, unclog drains etc.</p>
+          </div>
+          <div class="service-card">
+            <h4>Electricians</h4>
+            <p>Wiring, fixtures, safety checks etc.</p>
+          </div>
+          <div class="service-card">
+            <h4>Cleaning</h4>
+            <p>Deep clean, sofa, carpets etc.</p>
+          </div>
+          <div class="service-card">
+            <h4>Carpentry</h4>
+            <p>Furniture, repairs, custom work etc.</p>
+          </div>
+          <div class="service-card">
+            <h4>Painting</h4>
+            <p>Interior, exterior, waterproofing etc.</p>
+          </div>
+          <div class="service-card">
+            <h4>AC & Appliances</h4>
+            <p>Service, install, gas refill etc.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 BuildEasy Marketplace | All Rights Reserved</p>
+    </footer>
+
+    <script>
+      
+      window.addEventListener("scroll", function () {
+        const navbar = document.getElementById("navbar");
+        if (window.scrollY > 50) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+
+      
+      const signInBtn = document.getElementById("signInBtn");
+      signInBtn.addEventListener("click", function (event) {
+        alert("Redirecting to Sign In page...");
+      });
+
+      
+      const searchBtn = document.getElementById("searchBtn");
+      searchBtn.addEventListener("click", function () {
+        const service = document.getElementById("service").value;
+        const city = document.getElementById("city").value.trim();
+
+        if (service === "" || city === "") {
+          alert("Please select a service and enter a city!");
+        } else {
+          alert(`Searching for ${service} services in ${city}...`);
+          
+        }
+      });
+    </script>
+  </body>
+</html>
